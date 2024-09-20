@@ -1,0 +1,55 @@
+assignment 24
+Here’s a concise overview addressing each question:
+
+1. Relationship between def statements and lambda expressions:
+   - Both are used to define functions in Python. 
+   - `def` statements create named functions with a block of code, while `lambda` expressions create anonymous functions (i.e., functions without a name) that are limited to a single expression.
+   - `lambda` functions are often used for short, throwaway functions, while `def` is used for more complex operations.
+
+2. Benefit of lambda:
+   - Conciseness: They allow for defining simple functions in a single line.
+   - Readability: When used as arguments to higher-order functions (like `map`, `filter`, and `sorted`), they can make the code cleaner and easier to read.
+
+3. Comparison of map, filter, and reduce:
+   - map: Applies a function to all items in an iterable (e.g., list) and returns a new iterable with the results. 
+     ```python
+     result = map(func, iterable)
+     ```
+   - filter: Applies a function that returns a Boolean to an iterable, returning only the items that evaluate to `True`.
+     ```python
+     result = filter(func, iterable)
+     ```
+   - reduce: Takes a function and an iterable, applying the function cumulatively to the items of the iterable, reducing it to a single value. It requires `from functools import reduce`.
+     ```python
+     result = reduce(func, iterable)
+     ```
+
+4. Function annotations:
+   - Function annotations are a way to attach metadata to function parameters and return values using a colon (`:`) for parameters and an arrow (`->`) for the return type.
+   - They are used for documentation and type hints, improving code readability and helping with static type checking.
+   ```python
+   def func(x: int, y: int) -> int:
+       return x + y
+   ```
+
+5. Recursive functions:
+   - Recursive functions call themselves to solve smaller instances of the same problem.
+   - They are used in algorithms that can be defined in terms of simpler cases, such as calculating factorials, Fibonacci sequences, or traversing trees.
+   - A base case is essential to prevent infinite recursion.
+   ```python
+   def factorial(n):
+       return 1 if n == 0 else n * factorial(n - 1)
+   ```
+
+6. General design guidelines for coding functions:
+   - Single Responsibility: Each function should perform one task or operation.
+   - Descriptive Names: Use clear, descriptive names that convey the purpose of the function.
+   - Parameters: Keep the number of parameters manageable. Prefer keyword arguments for clarity.
+   - Avoid Side Effects: Functions should not modify global state or rely on it unless necessary.
+   - Documentation: Include docstrings to describe the function’s behavior, parameters, and return values.
+
+7. Ways functions can communicate results to a caller:
+   - Return Values: Functions can return results using the `return` statement.
+   - Output Parameters: Functions can modify mutable objects (like lists or dictionaries) passed as arguments.
+   - Exceptions: Functions can raise exceptions to signal errors or special conditions.
+   - Global Variables: Functions can modify global variables, although this practice is generally discouraged for clarity.

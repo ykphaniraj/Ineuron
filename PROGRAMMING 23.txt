@@ -1,0 +1,68 @@
+PROGRAMMING 23
+
+
+ Question 1: Check if Number is Symmetrical
+```python
+def is_symmetrical(num):
+    return str(num) == str(num)[::-1]
+
+# Examples
+print(is_symmetrical(7227))       # ➞ True
+print(is_symmetrical(12567))      # ➞ False
+print(is_symmetrical(44444444))   # ➞ True
+print(is_symmetrical(9939))       # ➞ False
+print(is_symmetrical(1112111))    # ➞ True
+```
+
+ Question 2: Multiply Numbers in a String
+```python
+def multiply_nums(nums):
+    numbers = map(int, nums.split(', '))
+    product = 1
+    for number in numbers:
+        product *= number
+    return product
+
+# Examples
+print(multiply_nums("2, 3"))               # ➞ 6
+print(multiply_nums("1, 2, 3, 4"))         # ➞ 24
+print(multiply_nums("54, 75, 453, 0"))     # ➞ 0
+print(multiply_nums("10, -2"))             # ➞ -20
+```
+
+ Question 3: Square Every Digit
+```python
+def square_digits(num):
+    return int(''.join(str(int(digit)2) for digit in str(num)))
+
+# Examples
+print(square_digits(9119))    # ➞ 811181
+print(square_digits(2483))    # ➞ 416649
+print(square_digits(3212))    # ➞ 9414
+```
+
+ Question 4: Sort and Remove Duplicates
+```python
+def setify(lst):
+    return sorted(set(lst))
+
+# Examples
+print(setify([1, 3, 3, 5, 5]))           # ➞ [1, 3, 5]
+print(setify([4, 4, 4, 4]))              # ➞ [4]
+print(setify([5, 7, 8, 9, 10, 15]))      # ➞ [5, 7, 8, 9, 10, 15]
+print(setify([3, 3, 3, 2, 1]))           # ➞ [1, 2, 3]
+```
+
+ Question 5: Find Mean of Digits
+```python
+def mean(num):
+    digits = [int(digit) for digit in str(num)]
+    return sum(digits) // len(digits)
+
+# Examples
+print(mean(42))        # ➞ 3
+print(mean(12345))     # ➞ 3
+print(mean(666))       # ➞ 6
+```
+
+Let me know if you have any questions or need further clarification!

@@ -1,0 +1,62 @@
+assignment 23
+Here’s the explanation of each code snippet and its result:
+
+1. Code Explanation:
+   ```python
+   def func(a, b=6, c=8):
+       print(a, b, c)
+   func(1, 2)
+   ```
+   Result: `1 2 8`  
+   Explanation: The function `func` is called with `a` as `1` and `b` as `2`. Since `c` has a default value of `8`, it is not overridden. Thus, it prints `1 2 8`.
+
+2. Code Explanation:
+   ```python
+   def func(a, b, c=5):
+       print(a, b, c)
+   func(1, c=3, b=2)
+   ```
+   Result: `1 2 3`  
+   Explanation: Here, `a` is `1`, `b` is explicitly set to `2`, and `c` is explicitly set to `3`. The order of parameters is respected, resulting in `1 2 3`.
+
+3. Code Explanation:
+   ```python
+   def func(a, *pargs):
+       print(a, pargs)
+   func(1, 2, 3)
+   ```
+   Result: `1 (2, 3)`  
+   Explanation: The first argument `1` is assigned to `a`, and the rest (`2` and `3`) are captured in the tuple `pargs`. Thus, it prints `1` followed by the tuple `(2, 3)`.
+
+4. Code Explanation:
+   ```python
+   def func(a, kargs):
+       print(a, kargs)
+   func(a=1, c=3, b=2)
+   ```
+   Result: `1 {'c': 3, 'b': 2}`  
+   Explanation: The parameter `a` is set to `1`, and the keyword arguments `c` and `b` are captured in the dictionary `kargs`. The output shows `1` and the dictionary.
+
+5. Code Explanation:
+   ```python
+   def func(a, b, c=8, d=5): 
+       print(a, b, c, d)
+   func(1, *(5, 6))
+   ```
+   Result: `1 5 6 5`  
+   Explanation: Here, `a` is set to `1`, `b` receives the first element of the tuple `5`, and `c` receives the second element `6`. The default value of `d` remains `5`. Thus, the output is `1 5 6 5`.
+
+6. Code Explanation:
+   ```python
+   def func(a, b, c): 
+       a = 2; 
+       b[0] = 'x'; 
+       c['a'] = 'y'
+   l = 1; 
+   m = [1]; 
+   n = {'a': 0}
+   func(l, m, n)
+   l, m, n
+   ```
+   Result: `1 [‘x’] {'a': 'y'}`  
+   Explanation: Inside `func`, `a` is set to `2` but does not affect the global `l`. The first element of the list `m` is modified to `'x'`, and the dictionary `n` is updated so that `n['a']` is now `'y'`. Therefore, `l` remains `1`, `m` is now `['x']`, and `n` is `{'a': 'y'}`.

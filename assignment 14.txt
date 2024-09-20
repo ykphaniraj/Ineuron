@@ -1,0 +1,51 @@
+assignment 14
+
+
+1. What does RGBA stand for?  
+   - RGBA stands for Red, Green, Blue, Alpha. The Alpha channel represents the transparency level, where 0 is fully transparent and 255 is fully opaque.
+
+2. From the Pillow module, how do you get the RGBA value of any image?  
+   - You can use the `getpixel()` method from the Pillow module. Example:
+     ```python
+     from PIL import Image
+     img = Image.open('image.png')
+     rgba_value = img.convert("RGBA").getpixel((x, y))
+     ```
+     This converts the image to RGBA and retrieves the pixel's RGBA value at position `(x, y)`.
+
+3. What is a box tuple, and how does it work?  
+   - A box tuple is a 4-tuple that defines a rectangular region in an image. It is structured as `(left, upper, right, lower)` where:
+     - `left`: x-coordinate of the left edge,
+     - `upper`: y-coordinate of the top edge,
+     - `right`: x-coordinate of the right edge,
+     - `lower`: y-coordinate of the bottom edge.
+     This defines the rectangular area to be used in methods like cropping.
+
+4. How can you find out the width and height of an Image object?  
+   - You can find the width and height using the `size` attribute of an Image object:
+     ```python
+     width, height = img.size
+     ```
+
+5. What method would you call to get an Image object for a 100×100 image, excluding the lower-left quarter of it?  
+   - You would use the `crop()` method with a box tuple that excludes the lower-left quarter:
+     ```python
+     cropped_img = img.crop((50, 0, 100, 50))
+     ```
+
+6. After making changes to an Image object, how could you save it as an image file?  
+   - You can save the modified image using the `save()` method:
+     ```python
+     img.save('new_image.png')
+     ```
+
+7. What module contains Pillow’s shape-drawing code?  
+   - Pillow’s shape-drawing code is in the `ImageDraw` module.
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?  
+   - A `Draw` object from the `ImageDraw` module has drawing methods. You get this object by calling `ImageDraw.Draw()` on an Image object:
+     ```python
+     from PIL import ImageDraw
+     draw = ImageDraw.Draw(img)
+     draw.line((0, 0, 100, 100), fill="red")
+     ```

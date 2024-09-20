@@ -1,0 +1,60 @@
+PROGRAMMEE 25
+
+
+### Question 1: Count Equal Integers
+```python
+def equal(a, b, c):
+    values = {a, b, c}
+    return 3 if len(values) == 1 else (2 if len(values) == 2 else 0)
+
+# Examples
+print(equal(3, 4, 3))  # ➞ 2
+print(equal(1, 1, 1))  # ➞ 3
+print(equal(3, 4, 1))  # ➞ 0
+```
+
+### Question 2: Convert Dictionary to List of Tuples
+```python
+def dict_to_list(d):
+    return sorted(d.items())
+
+# Examples
+print(dict_to_list({"D": 1, "B": 2, "C": 3}))  # ➞ [("B", 2), ("C", 3), ("D", 1)]
+print(dict_to_list({"likes": 2, "dislikes": 3, "followers": 10}))  # ➞ [("dislikes", 3), ("followers", 10), ("likes", 2)]
+```
+
+### Question 3: Create Mapping of Lower and Upper Case
+```python
+def mapping(letters):
+    return {letter: letter.upper() for letter in letters}
+
+# Examples
+print(mapping(["p", "s"]))  # ➞ {"p": "P", "s": "S"}
+print(mapping(["a", "b", "c"]))  # ➞ {"a": "A", "b": "B", "c": "C"}
+print(mapping(["a", "v", "y", "z"]))  # ➞ {"a": "A", "v": "V", "y": "Y", "z": "Z"}
+```
+
+### Question 4: Replace Vowels in String
+```python
+def vow_replace(string, vowel):
+    vowels = "aeiou"
+    return ''.join(vowel if char in vowels else char for char in string)
+
+# Examples
+print(vow_replace("apples and bananas", "u"))  # ➞ "upplus und bununus"
+print(vow_replace("cheese casserole", "o"))  # ➞ "chooso cossorolo"
+print(vow_replace("stuffed jalapeno poppers", "e"))  # ➞ "steffed jelepene peppers"
+```
+
+### Question 5: ASCII Capitalization
+```python
+def ascii_capitalize(string):
+    return ''.join(char.upper() if ord(char) % 2 == 0 else char.lower() for char in string)
+
+# Examples
+print(ascii_capitalize("to be or not to be!"))  # ➞ "To Be oR NoT To Be!"
+print(ascii_capitalize("THE LITTLE MERMAID"))  # ➞ "THe LiTTLe meRmaiD"
+print(ascii_capitalize("Oh what a beautiful morning."))  # ➞ "oH wHaT a BeauTiFuL"
+```
+
+Feel free to ask if you have any questions about these functions!

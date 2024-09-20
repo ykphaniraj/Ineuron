@@ -1,0 +1,76 @@
+PROGRAMMING 21
+
+
+ Question 1: Next in Line
+```python
+def next_in_line(lst, num):
+    if not lst:
+        return "No list has been selected"
+    lst.append(num)
+    lst.pop(0)
+    return lst
+
+# Examples
+print(next_in_line([5, 6, 7, 8, 9], 1))  # ➞ [6, 7, 8, 9, 1]
+print(next_in_line([7, 6, 3, 23, 17], 10))  # ➞ [6, 3, 23, 17, 10]
+print(next_in_line([1, 10, 20, 42], 6))  # ➞ [10, 20, 42, 6]
+print(next_in_line([], 6))  # ➞ "No list has been selected"
+```
+
+ Question 2: Get Budgets
+```python
+def get_budgets(lst):
+    return sum(person['budget'] for person in lst)
+
+# Examples
+print(get_budgets([
+    {"name": "John", "age": 21, "budget": 23000},
+    {"name": "Steve", "age": 32, "budget": 40000},
+    {"name": "Martin", "age": 16, "budget": 2700}
+]))  # ➞ 65700
+
+print(get_budgets([
+    {"name": "John", "age": 21, "budget": 29000},
+    {"name": "Steve", "age": 32, "budget": 32000},
+    {"name": "Martin", "age": 16, "budget": 1600}
+]))  # ➞ 62600
+```
+
+ Question 3: Alphabet Soup
+```python
+def alphabet_soup(s):
+    return ''.join(sorted(s))
+
+# Examples
+print(alphabet_soup("hello"))  # ➞ "ehllo"
+print(alphabet_soup("edabit"))  # ➞ "abdeit"
+print(alphabet_soup("hacker"))  # ➞ "acehkr"
+print(alphabet_soup("geek"))  # ➞ "eegk"
+print(alphabet_soup("javascript"))  # ➞ "aacijprstv"
+```
+
+ Question 4: Compound Interest
+```python
+def compound_interest(p, t, r, n):
+    return round(p * (1 + r/n) ** (n*t), 2)
+
+# Examples
+print(compound_interest(10000, 10, 0.06, 12))  # ➞ 18193.97
+print(compound_interest(100, 1, 0.05, 1))  # ➞ 105.0
+print(compound_interest(3500, 15, 0.1, 4))  # ➞ 15399.26
+print(compound_interest(100000, 20, 0.15, 365))  # ➞ 2007316.26
+```
+
+ Question 5: Return Only Integers
+```python
+def return_only_integer(lst):
+    return [x for x in lst if isinstance(x, int)]
+
+# Examples
+print(return_only_integer([9, 2, "space", "car", "lion", 16]))  # ➞ [9, 2, 16]
+print(return_only_integer(["hello", 81, "basketball", 123, "fox"]))  # ➞ [81, 123]
+print(return_only_integer([10, "121", 56, 20, "car", 3, "lion"]))  # ➞ [10, 56, 20, 3]
+print(return_only_integer(["String", True, 3.3, 1]))  # ➞ [1]
+```
+
+Feel free to ask if you have any questions about these solutions!

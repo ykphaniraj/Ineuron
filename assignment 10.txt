@@ -1,0 +1,53 @@
+assignment 10
+
+
+1. **How do you distinguish between `shutil.copy()` and `shutil.copytree()`?**
+   - `shutil.copy()` copies a single file from a source location to a destination.
+   - `shutil.copytree()` recursively copies an entire directory tree, including all files and subdirectories.
+
+2. **What function is used to rename files?**
+   - The `os.rename()` function is used to rename files (or move them to a different location).
+
+3. **What is the difference between the delete functions in the `send2trash` and `shutil` modules?**
+   - `send2trash.send2trash()` sends files or directories to the operating system's trash/recycle bin.
+   - `shutil.rmtree()` and `os.remove()` (in the `shutil` module) permanently delete files or directories without sending them to the trash, meaning the deletion is immediate and not recoverable.
+
+4. **ZipFile objects have a `close()` method just like File objects’ `close()` method. What ZipFile method is equivalent to File objects’ `open()` method?**
+   - The `ZipFile()` constructor is equivalent to a File object's `open()` method. It is used to open a zip file for reading or writing.
+   ```python
+   with ZipFile('example.zip', 'r') as zip_ref:
+       # work with the zip file
+   ```
+
+5. **Create a program that searches a folder tree for files with a certain file extension (such as `.pdf` or `.jpg`). Copy these files from wherever they are to a new folder.**
+
+Here is a Python program to accomplish this:
+
+```python
+import os
+import shutil
+
+def search_and_copy_files(src_folder, dest_folder, file_extension):
+    # Create destination folder if it doesn't exist
+    if not os.path.exists(dest_folder):
+        os.makedirs(dest_folder)
+    
+    # Walk through the folder tree
+    for foldername, subfolders, filenames in os.walk(src_folder):
+        for filename in filenames:
+            if filename.endswith(file_extension):
+                # Full path of the source file
+                src_file = os.path.join(foldername, filename)
+                # Copy file to destination
+                shutil.copy(src_file, dest_folder)
+                print(f"Copied: {src_file} to {dest_folder}")
+
+# Example usage
+src_folder = '/path/to/source/folder'
+dest_folder = '/path/to/destination/folder'
+file_extension = '.pdf'  # Change this to the desired extension
+
+search_and_copy_files(src_folder, dest_folder, file_extension)
+```
+
+This program will search through all subdirectories in the `src_folder` for files with the specified `file_extension` and copy them to the `dest_folder`. You can modify the `src_folder`, `dest_folder`, and `file_extension` variables as needed.

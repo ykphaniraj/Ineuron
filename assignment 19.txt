@@ -1,0 +1,148 @@
+assignment 19
+
+1. **Create a class called `Thing` and an object called `example`:**
+   ```python
+   class Thing:
+       pass
+
+   example = Thing()
+   print(Thing)    # <class '__main__.Thing'>
+   print(example)   # <__main__.Thing object at ...>
+   # They are different.
+   ```
+
+2. **Create `Thing2` with a class attribute `letters`:**
+   ```python
+   class Thing2:
+       letters = 'abc'
+
+   print(Thing2.letters)  # abc
+   ```
+
+3. **Create `Thing3` with an instance attribute `letters`:**
+   ```python
+   class Thing3:
+       def __init__(self):
+           self.letters = 'xyz'
+
+   t3 = Thing3()
+   print(t3.letters)  # xyz
+   # Yes, you need to create an object to access it.
+   ```
+
+4. **Create an `Element` class with attributes:**
+   ```python
+   class Element:
+       def __init__(self, name, symbol, number):
+           self.name = name
+           self.symbol = symbol
+           self.number = number
+
+   hydrogen = Element('Hydrogen', 'H', 1)
+   ```
+
+5. **Create a dictionary and an `Element` object:**
+   ```python
+   element_data = {'name': 'Hydrogen', 'symbol': 'H', 'number': 1}
+   hydrogen = Element(**element_data)
+   ```
+
+6. **Define a `dump()` method and use it:**
+   ```python
+   class Element:
+       def __init__(self, name, symbol, number):
+           self.name = name
+           self.symbol = symbol
+           self.number = number
+
+       def dump(self):
+           print(self.name, self.symbol, self.number)
+
+   hydrogen = Element('Hydrogen', 'H', 1)
+   hydrogen.dump()  # Hydrogen H 1
+   ```
+
+7. **Change `dump` to `__str__` and call `print(hydrogen)`:**
+   ```python
+   class Element:
+       def __init__(self, name, symbol, number):
+           self.name = name
+           self.symbol = symbol
+           self.number = number
+
+       def __str__(self):
+           return f"{self.name} {self.symbol} {self.number}"
+
+   hydrogen = Element('Hydrogen', 'H', 1)
+   print(hydrogen)  # Hydrogen H 1
+   ```
+
+8. **Make attributes private and define getters:**
+   ```python
+   class Element:
+       def __init__(self, name, symbol, number):
+           self.__name = name
+           self.__symbol = symbol
+           self.__number = number
+
+       @property
+       def name(self):
+           return self.__name
+
+       @property
+       def symbol(self):
+           return self.__symbol
+
+       @property
+       def number(self):
+           return self.__number
+
+   hydrogen = Element('Hydrogen', 'H', 1)
+   ```
+
+9. **Define classes `Bear`, `Rabbit`, and `Octothorpe`:**
+   ```python
+   class Bear:
+       def eats(self):
+           return 'berries'
+
+   class Rabbit:
+       def eats(self):
+           return 'clover'
+
+   class Octothorpe:
+       def eats(self):
+           return 'campers'
+
+   bear = Bear()
+   rabbit = Rabbit()
+   octothorpe = Octothorpe()
+   print(bear.eats(), rabbit.eats(), octothorpe.eats())
+   ```
+
+10. **Define `Laser`, `Claw`, `SmartPhone`, and `Robot`:**
+    ```python
+    class Laser:
+        def does(self):
+            return 'disintegrate'
+
+    class Claw:
+        def does(self):
+            return 'crush'
+
+    class SmartPhone:
+        def does(self):
+            return 'ring'
+
+    class Robot:
+        def __init__(self):
+            self.laser = Laser()
+            self.claw = Claw()
+            self.smartphone = SmartPhone()
+
+        def does(self):
+            print(self.laser.does(), self.claw.does(), self.smartphone.does())
+
+    robot = Robot()
+    robot.does()  # disintegrate crush ring
+    ```

@@ -1,0 +1,84 @@
+assignment 22
+
+Here's the analysis of each code snippet:
+
+1. Code Explanation:
+   ```python
+   X = 'iNeuron'
+   def func():
+       print(X)
+   func()
+   ```
+   Result: The output will be `iNeuron`.  
+   Explanation: The function `func` prints the variable `X`, which is defined in the global scope. Since `X` is accessible from within the function, it prints its value.
+
+2. Code Explanation:
+   ```python
+   X = 'iNeuron'
+   def func():
+       X = 'NI!'
+   func()
+   print(X)
+   ```
+   Result: The output will be `iNeuron`.  
+   Explanation: The function `func` defines a local variable `X`, which does not affect the global `X`. When `print(X)` is called, it refers to the global variable, which remains unchanged.
+
+3. Code Explanation:
+   ```python
+   X = 'iNeuron'
+   def func():
+       X = 'NI'
+       print(X)
+   func()
+   print(X)
+   ```
+   Result: The output will be:
+   ```
+   NI
+   iNeuron
+   ```
+   Explanation: The function `func` prints its local variable `X`, which is `NI`. The second `print(X)` refers to the global `X`, which remains `iNeuron`.
+
+4. Code Explanation:
+   ```python
+   X = 'iNeuron'
+   def func():
+       global X
+       X = 'NI'
+   func()
+   print(X)
+   ```
+   Result: The output will be `NI`.  
+   Explanation: The `global` keyword allows the function to modify the global variable `X`. Therefore, after calling `func`, `X` is updated to `NI`.
+
+5. Code Explanation:
+   ```python
+   X = 'iNeuron'
+   def func():
+       X = 'NI'
+       def nested():
+           print(X)
+       nested()
+   func()
+   print(X)
+   ```
+   Result: The output will be:
+   ```
+   NI
+   iNeuron
+   ```
+   Explanation: The function `nested` prints the local variable `X` from `func`, which is `NI`. The global variable `X` remains unchanged and retains its original value.
+
+6. Code Explanation:
+   ```python
+   def func():
+       X = 'NI'
+       def nested():
+           nonlocal X
+           X = 'Spam'
+       nested()
+       print(X)
+   func()
+   ```
+   Result: The output will be `Spam`.  
+   Explanation: The `nonlocal` keyword allows `nested` to modify the `X` variable from its enclosing scope (which is `func`). Therefore, after calling `nested`, `X` in `func` is updated to `Spam` and printed.

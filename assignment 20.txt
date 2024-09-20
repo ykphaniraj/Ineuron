@@ -1,0 +1,78 @@
+assignment 20
+Here's a concise solution to each task in 10 lines:
+
+1. Set the variable and save to a file:
+   ```python
+   test1 = 'This is a test of the emergency text system,'
+   with open('test.txt', 'w') as file:
+       file.write(test1)
+   ```
+
+2. Read from the file and check for differences:
+   ```python
+   with open('test.txt', 'r') as file:
+       test2 = file.read()
+   print(test1 == test2)  # Check for equality
+   ```
+
+3. Create a CSV file called `books.csv`:
+   ```python
+   with open('books.csv', 'w') as file:
+       file.write('title,author,year\n')
+       file.write('The Weirdstone of Brisingamen,Alan Garner,1960\n')
+       file.write('Perdido Street Station,China Miéville,2000\n')
+       file.write('Thud!,Terry Pratchett,2005\n')
+       file.write('The Spellman Files,Lisa Lutz,2007\n')
+       file.write('Small Gods,Terry Pratchett,1992\n')
+   ```
+
+4. Create a SQLite database and table:
+   ```python
+   import sqlite3
+   conn = sqlite3.connect('books.db')
+   cursor = conn.cursor()
+   cursor.execute('CREATE TABLE books (title TEXT, author TEXT, year INTEGER)')
+   ```
+
+5. Insert data from `books.csv` into the `books` table:
+   ```python
+   import csv
+   with open('books.csv', 'r') as file:
+       reader = csv.reader(file)
+       next(reader)  # Skip header
+       cursor.executemany('INSERT INTO books VALUES (?, ?, ?)', reader)
+   conn.commit()
+   ```
+
+6. Select and print the title column in alphabetical order:
+   ```python
+   cursor.execute('SELECT title FROM books ORDER BY title')
+   print(cursor.fetchall())
+   ```
+
+7. Select and print all columns in order of publication:
+   ```python
+   cursor.execute('SELECT * FROM books ORDER BY year')
+   print(cursor.fetchall())
+   ```
+
+8. Use SQLAlchemy to connect to the database:
+   ```python
+   from sqlalchemy import create_engine
+   engine = create_engine('sqlite:///books.db')
+   connection = engine.connect()
+   ```
+
+9. Install Redis and create a hash:
+   ```python
+   import redis
+   r = redis.Redis()
+   r.hset('test', mapping={'count': 1, 'name': 'Fester Bestertester'})
+   print(r.hgetall('test'))
+   ```
+
+10. Increment the count field and print it:
+    ```python
+    r.hincrby('test', 'count', 1)
+    print(r.hget('test', 'count'))  # Output: 2
+    ```

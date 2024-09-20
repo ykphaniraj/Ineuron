@@ -1,0 +1,75 @@
+assignment 15
+
+1. How many seconds are in an hour?
+   ```python
+   # Use the interactive interpreter to calculate
+   seconds_in_minute = 60
+   minutes_in_hour = 60
+   seconds_in_hour = seconds_in_minute * minutes_in_hour
+   seconds_in_hour
+   ```
+   Solution: `60 * 60 = 3600` seconds in an hour.
+
+2. Assign the result (seconds in an hour) to a variable called `seconds_per_hour`.
+   ```python
+   seconds_per_hour = seconds_in_hour
+   ```
+
+3. How many seconds are in a day?
+   ```python
+   hours_in_day = 24
+   seconds_in_day = seconds_per_hour * hours_in_day
+   seconds_in_day
+   ```
+   Solution: `3600 * 24 = 86400` seconds in a day.
+
+4. Calculate `seconds_per_day` again, but save the result in a variable called `seconds_per_day`.
+   ```python
+   seconds_per_day = seconds_per_hour * hours_in_day
+   ```
+
+5. Divide `seconds_per_day` by `seconds_per_hour` using floating-point division (`/`).
+   ```python
+   result = seconds_per_day / seconds_per_hour
+   result
+   ```
+   Solution: `86400 / 3600 = 24.0`.
+
+6. Divide `seconds_per_day` by `seconds_per_hour` using integer division (`//`). Did this number agree with the floating-point value?
+   ```python
+   result_int = seconds_per_day // seconds_per_hour
+   result_int
+   ```
+   Solution: `86400 // 3600 = 24`. Yes, the result agrees with the floating-point division, except for the `.0`.
+
+7. Write a generator, `genPrimes`, that returns the sequence of prime numbers on successive calls to its `next()` method: 2, 3, 5, 7, 11, ...
+
+   A prime number generator can be written as follows:
+   ```python
+   def genPrimes():
+       primes = []
+       num = 2
+       while True:
+           for p in primes:
+               if num % p == 0:
+                   break
+           else:
+               primes.append(num)
+               yield num
+           num += 1
+   ```
+
+   Here's how it works:
+   - The generator function maintains a list `primes` of previously found primes.
+   - For each number `num`, it checks if `num` is divisible by any previously found prime.
+   - If `num` is not divisible by any prime, it is a prime, and we yield it.
+   - The loop continues indefinitely, generating successive prime numbers.
+
+   You can use it like this:
+   ```python
+   prime_gen = genPrimes()
+   print(next(prime_gen))  # 2
+   print(next(prime_gen))  # 3
+   print(next(prime_gen))  # 5
+   print(next(prime_gen))  # 7
+   ```

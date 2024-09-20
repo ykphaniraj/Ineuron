@@ -1,0 +1,60 @@
+PROGRAMMING 20
+
+ Question 1: Filter List
+```python
+def filter_list(lst):
+    return [x for x in lst if isinstance(x, int)]
+
+# Examples
+print(filter_list([1, 2, 3, "a", "b", 4]))  # ➞ [1, 2, 3, 4]
+print(filter_list(["A", 0, "Edabit", 1729, "Python", "1729"]))  # ➞ [0, 1729]
+print(filter_list(["Nothing", "here"]))  # ➞ []
+```
+
+ Question 2: Add Indexes
+```python
+def add_indexes(lst):
+    return [x + i for i, x in enumerate(lst)]
+
+# Examples
+print(add_indexes([0, 0, 0, 0, 0]))  # ➞ [0, 1, 2, 3, 4]
+print(add_indexes([1, 2, 3, 4, 5]))  # ➞ [1, 3, 5, 7, 9]
+print(add_indexes([5, 4, 3, 2, 1]))  # ➞ [5, 5, 5, 5, 5]
+```
+
+ Question 3: Cone Volume
+```python
+import math
+
+def cone_volume(height, radius):
+    return round((1/3) * math.pi * (radius ** 2) * height, 2)
+
+# Examples
+print(cone_volume(3, 2))  # ➞ 12.57
+print(cone_volume(15, 6))  # ➞ 565.49
+print(cone_volume(18, 0))  # ➞ 0
+```
+
+ Question 4: Triangular Number
+```python
+def triangle(n):
+    return n * (n + 1) // 2
+
+# Examples
+print(triangle(1))  # ➞ 1
+print(triangle(6))  # ➞ 21
+print(triangle(215))  # ➞ 23220
+```
+
+ Question 5: Missing Number
+```python
+def missing_num(lst):
+    return sum(range(1, 11)) - sum(lst)
+
+# Examples
+print(missing_num([1, 2, 3, 4, 6, 7, 8, 9, 10]))  # ➞ 5
+print(missing_num([7, 2, 3, 6, 5, 9, 1, 4, 8]))  # ➞ 10
+print(missing_num([10, 5, 1, 2, 4, 6, 8, 3, 9]))  # ➞ 7
+```
+
+Feel free to reach out if you need further assistance or explanations!
