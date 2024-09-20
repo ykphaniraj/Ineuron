@@ -1,0 +1,56 @@
+programme 15
+
+Question 1: Divisible by 5 and 7
+```python
+def divisible_by_5_and_7(n):
+    return (x for x in range(n + 1) if x % 5 == 0 and x % 7 == 0)
+
+n = int(input("Enter a number: "))
+result = ','.join(map(str, divisible_by_5_and_7(n)))
+print(result)
+```
+
+Question 2: Even Numbers
+```python
+def even_numbers(n):
+    return (x for x in range(n + 1) if x % 2 == 0)
+
+n = int(input("Enter a number: "))
+result = ','.join(map(str, even_numbers(n)))
+print(result)
+```
+
+Question 3: Fibonacci Sequence
+```python
+n = int(input("Enter a number: "))
+fibonacci_sequence = [0, 1] + [fibonacci_sequence[i - 1] + fibonacci_sequence[i - 2] for i in range(2, n)]
+print(','.join(map(str, fibonacci_sequence[:n])))
+```
+
+Question 4: Extract Username from Email
+```python
+email = input("Enter an email address: ")
+username = email.split('@')[0]
+print(username)
+```
+
+Question 5: Shape and Square Classes
+```python
+class Shape:
+    def area(self):
+        raise NotImplementedError("Subclasses should implement this!")
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def area(self):
+        return self.length ** 2
+
+# Example usage:
+length = float(input("Enter the length of the square: "))
+square = Square(length)
+print("Area of the square:", square.area())
+```
+
+Feel free to ask if you need further explanations or modifications!

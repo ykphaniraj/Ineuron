@@ -1,0 +1,63 @@
+programme 17
+
+
+Question 1: Evenly Divisible
+```python
+def evenly_divisible(a, b, c):
+    return sum(x for x in range(a, b + 1) if x % c == 0)
+
+# Examples
+print(evenly_divisible(1, 10, 20))  # ➞ 0
+print(evenly_divisible(1, 10, 2))   # ➞ 30
+print(evenly_divisible(1, 10, 3))   # ➞ 18
+```
+
+Question 2: Correct Signs
+```python
+def correct_signs(expression):
+    return eval(expression)
+
+# Examples
+print(correct_signs("3 < 7 < 11"))               # ➞ True
+print(correct_signs("13 > 44 > 33 > 1"))          # ➞ False
+print(correct_signs("1 < 2 < 6 < 9 > 3"))         # ➞ True
+```
+
+Question 3: Replace Vowels
+```python
+def replace_vowels(s, char):
+    vowels = "aeiouAEIOU"
+    return ''.join(char if c in vowels else c for c in s)
+
+# Examples
+print(replace_vowels("the aardvark", "#"))      # ➞ "th# ##rdv#rk"
+print(replace_vowels("minnie mouse", "?"))       # ➞ "m?nn?? m??s?"
+print(replace_vowels("shakespeare", "*"))        # ➞ "sh*k*sp**r*"
+```
+
+Question 4: Factorial Function
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# Examples
+print(factorial(5))  # ➞ 120
+print(factorial(3))  # ➞ 6
+print(factorial(1))  # ➞ 1
+print(factorial(0))  # ➞ 1
+```
+
+Question 5: Hamming Distance
+```python
+def hamming_distance(s1, s2):
+    return sum(ch1 != ch2 for ch1, ch2 in zip(s1, s2)) + abs(len(s1) - len(s2))
+
+# Examples
+print(hamming_distance("abcde", "bcdef"))  # ➞ 5
+print(hamming_distance("abcde", "abcde"))  # ➞ 0
+print(hamming_distance("strong", "strung")) # ➞ 1
+```
+
+Let me know if you need any more help!

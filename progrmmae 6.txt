@@ -1,0 +1,66 @@
+progrmmae 6
+
+
+
+1. **Display Fibonacci Sequence Using Recursion:**
+   ```python
+   def fibonacci(n):
+       if n <= 0:
+           return []
+       elif n == 1:
+           return [0]
+       elif n == 2:
+           return [0, 1]
+       else:
+           fib_seq = fibonacci(n - 1)
+           fib_seq.append(fib_seq[-1] + fib_seq[-2])
+           return fib_seq
+
+   n = 10  # Number of terms
+   print("Fibonacci Sequence:", fibonacci(n))
+   ```
+
+2. **Find Factorial of Number Using Recursion:**
+   ```python
+   def factorial(n):
+       if n == 0 or n == 1:
+           return 1
+       else:
+           return n * factorial(n - 1)
+
+   num = 5  # Example number
+   print(f"Factorial of {num}:", factorial(num))
+   ```
+
+3. **Calculate Your Body Mass Index (BMI):**
+   ```python
+   def calculate_bmi(weight, height):
+       return weight / (height ** 2)
+
+   weight = 70  # Weight in kg
+   height = 1.75  # Height in meters
+   bmi = calculate_bmi(weight, height)
+   print("Your BMI is:", bmi)
+   ```
+
+4. **Calculate the Natural Logarithm of Any Number:**
+   ```python
+   import math
+
+   def natural_log(num):
+       return math.log(num)
+
+   number = 10  # Example number
+   print(f"Natural logarithm of {number}:", natural_log(number))
+   ```
+
+5. **Cube Sum of First N Natural Numbers:**
+   ```python
+   def cube_sum(n):
+       return sum(i ** 3 for i in range(1, n + 1))
+
+   n = 5  # Example number
+   print(f"Cube sum of first {n} natural numbers:", cube_sum(n))
+   ```
+
+Feel free to test these functions with different values!

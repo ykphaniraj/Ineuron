@@ -1,0 +1,61 @@
+progrmmae 9
+
+
+1. **Check if the given number is a Disarium Number:**
+   ```python
+   def is_disarium(number):
+       digits = [int(d) for d in str(number)]
+       return sum(digit ** (index + 1) for index, digit in enumerate(digits)) == number
+
+   num = 89  # Example number
+   print(f"{num} is a Disarium Number:", is_disarium(num))
+   ```
+
+2. **Print all Disarium numbers between 1 to 100:**
+   ```python
+   def disarium_numbers_up_to(n):
+       return [num for num in range(1, n + 1) if is_disarium(num)]
+
+   print("Disarium numbers between 1 and 100:", disarium_numbers_up_to(100))
+   ```
+
+3. **Check if the given number is a Happy Number:**
+   ```python
+   def is_happy(number):
+       seen = set()
+       while number != 1 and number not in seen:
+           seen.add(number)
+           number = sum(int(d) ** 2 for d in str(number))
+       return number == 1
+
+   num = 19  # Example number
+   print(f"{num} is a Happy Number:", is_happy(num))
+   ```
+
+4. **Print all happy numbers between 1 and 100:**
+   ```python
+   def happy_numbers_up_to(n):
+       return [num for num in range(1, n + 1) if is_happy(num)]
+
+   print("Happy numbers between 1 and 100:", happy_numbers_up_to(100))
+   ```
+
+5. **Determine whether the given number is a Harshad Number:**
+   ```python
+   def is_harshad(number):
+       digit_sum = sum(int(d) for d in str(number))
+       return number % digit_sum == 0
+
+   num = 18  # Example number
+   print(f"{num} is a Harshad Number:", is_harshad(num))
+   ```
+
+6. **Print all pronic numbers between 1 and 100:**
+   ```python
+   def pronic_numbers_up_to(n):
+       return [i * (i + 1) for i in range(int(n**0.5) + 1) if i * (i + 1) <= n]
+
+   print("Pronic numbers between 1 and 100:", pronic_numbers_up_to(100))
+   ```
+
+You can test these functions with different numbers or ranges as needed!

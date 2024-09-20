@@ -1,0 +1,64 @@
+program 3
+
+
+1. Check if a Number is Positive, Negative, or Zero:
+   ```python
+   def check_number(num):
+       if num > 0:
+           return "Positive"
+       elif num < 0:
+           return "Negative"
+       else:
+           return "Zero"
+
+   number = 5  # Example number
+   print(f"The number {number} is:", check_number(number))
+   ```
+
+2. Check if a Number is Odd or Even:
+   ```python
+   def check_odd_even(num):
+       return "Even" if num % 2 == 0 else "Odd"
+
+   number = 7  # Example number
+   print(f"The number {number} is:", check_odd_even(number))
+   ```
+
+3. Check Leap Year:
+   ```python
+   def is_leap_year(year):
+       return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+   year = 2020  # Example year
+   print(f"The year {year} is a Leap Year:", is_leap_year(year))
+   ```
+
+4. Check Prime Number:
+   ```python
+   def is_prime(num):
+       if num <= 1:
+           return False
+       for i in range(2, int(num0.5) + 1):
+           if num % i == 0:
+               return False
+       return True
+
+   number = 29  # Example number
+   print(f"The number {number} is a Prime Number:", is_prime(number))
+   ```
+
+5. Print all Prime Numbers in the Interval of 1-10000:
+   ```python
+   def prime_numbers_in_interval(start, end):
+       primes = []
+       for num in range(start, end + 1):
+           if is_prime(num):
+               primes.append(num)
+       return primes
+
+   start, end = 1, 10000
+   primes = prime_numbers_in_interval(start, end)
+   print(f"Prime numbers between {start} and {end}:", primes)
+   ```
+
+Feel free to test these functions with different values!

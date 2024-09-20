@@ -1,0 +1,72 @@
+progrmmae 5
+
+
+1. **Find LCM (Least Common Multiple):**
+   ```python
+   def lcm(a, b):
+       def gcd(x, y):
+           while y:
+               x, y = y, x % y
+           return x
+       return abs(a * b) // gcd(a, b)
+
+   num1 = 12
+   num2 = 18
+   print(f"LCM of {num1} and {num2}:", lcm(num1, num2))
+   ```
+
+2. **Find HCF (Highest Common Factor):**
+   ```python
+   def hcf(a, b):
+       while b:
+           a, b = b, a % b
+       return a
+
+   num1 = 12
+   num2 = 18
+   print(f"HCF of {num1} and {num2}:", hcf(num1, num2))
+   ```
+
+3. **Convert Decimal to Binary, Octal, and Hexadecimal:**
+   ```python
+   def convert_decimal(num):
+       binary = bin(num)[2:]  # Convert to binary
+       octal = oct(num)[2:]    # Convert to octal
+       hexadecimal = hex(num)[2:]  # Convert to hexadecimal
+       return binary, octal, hexadecimal
+
+   decimal_number = 42
+   binary, octal, hexadecimal = convert_decimal(decimal_number)
+   print(f"Decimal: {decimal_number} -> Binary: {binary}, Octal: {octal}, Hexadecimal: {hexadecimal}")
+   ```
+
+4. **Find ASCII value of a character:**
+   ```python
+   def ascii_value(char):
+       return ord(char)
+
+   character = 'A'  # Example character
+   print(f"ASCII value of '{character}':", ascii_value(character))
+   ```
+
+5. **Make a Simple Calculator with 4 Basic Mathematical Operations:**
+   ```python
+   def calculator(a, b, operation):
+       if operation == '+':
+           return a + b
+       elif operation == '-':
+           return a - b
+       elif operation == '*':
+           return a * b
+       elif operation == '/':
+           return a / b if b != 0 else "Cannot divide by zero"
+       else:
+           return "Invalid operation"
+
+   num1 = 10
+   num2 = 5
+   op = '+'  # Example operation
+   print(f"{num1} {op} {num2} =", calculator(num1, num2, op))
+   ```
+
+Feel free to test these functions with different inputs!

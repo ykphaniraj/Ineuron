@@ -1,0 +1,106 @@
+programme 13
+
+
+
+Question 1: Calculate Q
+```python
+import math
+
+def calculate_q(d_values):
+    C = 50
+    H = 30
+    results = []
+    
+    for d in d_values:
+        Q = math.sqrt((2 * C * d) / H)
+        results.append(round(Q))
+    
+    return ','.join(map(str, results))
+
+# Example usage
+input_d = "100,150,180"
+d_values = list(map(int, input_d.split(',')))
+output = calculate_q(d_values)
+print(output)  # Output: 18,22,24
+```
+
+Question 2: Generate 2D Array
+```python
+def generate_2d_array(x, y):
+    array = [[i * j for j in range(y)] for i in range(x)]
+    return array
+
+# Example usage
+input_xy = "3,5"
+x, y = map(int, input_xy.split(','))
+output = generate_2d_array(x, y)
+print(output)  # Output: [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+```
+
+Question 3: Sort Words Alphabetically
+```python
+def sort_words(input_words):
+    words = input_words.split(',')
+    sorted_words = sorted(words)
+    return ','.join(sorted_words)
+
+# Example usage
+input_sequence = "without,hello,bag,world"
+output = sort_words(input_sequence)
+print(output)  # Output: bag,hello,without,world
+```
+
+Question 4: Remove Duplicates and Sort Words
+```python
+def remove_duplicates_and_sort(input_string):
+    words = input_string.split()
+    unique_sorted_words = sorted(set(words))
+    return ' '.join(unique_sorted_words)
+
+# Example usage
+input_sequence = "hello world and practice makes perfect and hello world again"
+output = remove_duplicates_and_sort(input_sequence)
+print(output)  # Output: again and hello makes perfect practice world
+```
+
+Question 5: Count Letters and Digits
+```python
+def count_letters_and_digits(input_string):
+    letters = sum(c.isalpha() for c in input_string)
+    digits = sum(c.isdigit() for c in input_string)
+    
+    print(f"LETTERS {letters}")
+    print(f"DIGITS {digits}")
+
+# Example usage
+input_sentence = "hello world! 123"
+count_letters_and_digits(input_sentence)
+# Output:
+# LETTERS 10
+# DIGITS 3
+```
+
+Question 6: Validate Passwords
+```python
+import re
+
+def validate_passwords(passwords):
+    valid_passwords = []
+    for password in passwords:
+        if (6 <= len(password) <= 12 and
+            re.search(r"[a-z]", password) and
+            re.search(r"[A-Z]", password) and
+            re.search(r"[0-9]", password) and
+            re.search(r"[$#@]", password)):
+            valid_passwords.append(password)
+    
+    return ','.join(valid_passwords)
+
+# Example usage
+input_passwords = "ABd1234@1,a F1#,2w3E*,2We3345"
+password_list = input_passwords.split(',')
+output = validate_passwords(password_list)
+print(output)  # Output: ABd1234@1
+```
+
+Feel free to test these solutions or ask for further assistance!

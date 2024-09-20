@@ -1,0 +1,58 @@
+programme 14
+
+
+Question 1: Class with a Generator for Numbers Divisible by 7
+```python
+class DivisibleBySeven:
+    def __init__(self, n):
+        self.n = n
+
+    def __iter__(self):
+        for num in range(0, self.n + 1):
+            if num % 7 == 0:
+                yield num
+
+# Example usage
+n = 50
+divisible_by_seven = DivisibleBySeven(n)
+print(list(divisible_by_seven))  # Output: [0, 7, 14, 21, 28, 35, 42, 49]
+```
+
+Question 2: Word Frequency Count
+```python
+from collections import Counter
+
+def word_frequency(input_text):
+    # Split the input text into words
+    words = input_text.split()
+    # Count the frequency of each word
+    frequency = Counter(words)
+    # Sort the output
+    sorted_frequency = sorted(frequency.items())
+    
+    # Print the results
+    for word, count in sorted_frequency:
+        print(f"{word}:{count}")
+
+# Example usage
+input_text = "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
+word_frequency(input_text)
+```
+
+Output for the Word Frequency Example
+The output from the provided example will be:
+```
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1
+```
+
+Feel free to ask if you need any modifications or further explanations!

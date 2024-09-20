@@ -1,0 +1,52 @@
+progrmmae 8
+
+Here are the Python programs for the tasks you specified:
+
+1. **Add Two Matrices:**
+   ```python
+   def add_matrices(A, B):
+       return [[A[i][j] + B[i][j] for j in range(len(A[0]))] for i in range(len(A))]
+
+   A = [[1, 2, 3], [4, 5, 6]]
+   B = [[7, 8, 9], [10, 11, 12]]
+   print("Sum of matrices:", add_matrices(A, B))
+   ```
+
+2. **Multiply Two Matrices:**
+   ```python
+   def multiply_matrices(A, B):
+       return [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]
+
+   A = [[1, 2], [3, 4]]
+   B = [[5, 6], [7, 8]]
+   print("Product of matrices:", multiply_matrices(A, B))
+   ```
+
+3. **Transpose a Matrix:**
+   ```python
+   def transpose_matrix(matrix):
+       return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+
+   matrix = [[1, 2, 3], [4, 5, 6]]
+   print("Transposed matrix:", transpose_matrix(matrix))
+   ```
+
+4. **Sort Words in Alphabetic Order:**
+   ```python
+   def sort_words(sentence):
+       return sorted(sentence.split())
+
+   sentence = "hello world this is a test"
+   print("Sorted words:", sort_words(sentence))
+   ```
+
+5. **Remove Punctuation From a String (in one line):**
+   ```python
+   import string
+
+   clean_string = lambda s: s.translate(str.maketrans('', '', string.punctuation))
+   text = "Hello, world! This is a test."
+   print("String without punctuation:", clean_string(text))
+   ```
+
+Feel free to modify the inputs to test these programs!

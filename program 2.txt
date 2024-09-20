@@ -1,0 +1,55 @@
+program 2 
+
+
+1. Print "Hello Python":
+   ```python
+   print("Hello Python")
+   ```
+
+2. Do Arithmetical Operations (Addition and Division):
+   ```python
+   def arithmetic_operations(a, b):
+       addition = a + b
+       division = a / b if b != 0 else "Cannot divide by zero"
+       return addition, division
+
+   num1 = 10
+   num2 = 5
+   add, div = arithmetic_operations(num1, num2)
+   print(f"Addition: {add}, Division: {div}")
+   ```
+
+3. Find the Area of a Triangle:
+   ```python
+   def area_of_triangle(base, height):
+       return 0.5 * base * height
+
+   base = 10  # Example base
+   height = 5  # Example height
+   area = area_of_triangle(base, height)
+   print(f"Area of the triangle: {area}")
+   ```
+
+4. Swap Two Variables:
+   ```python
+   def swap_variables(a, b):
+       return b, a
+
+   x = 5
+   y = 10
+   x, y = swap_variables(x, y)
+   print(f"Swapped values: x = {x}, y = {y}")
+   ```
+
+5. Generate a Random Number:
+   ```python
+   import random
+
+   def generate_random_number(start, end):
+       return random.randint(start, end)
+
+   random_number = generate_random_number(1, 100)  # Example range
+   print("Random number between 1 and 100:", random_number)
+   ```
+
+Feel free to run these programs and modify the inputs as needed!

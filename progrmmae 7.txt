@@ -1,0 +1,54 @@
+progrmmae 7
+
+
+1. **Find the sum of an array:**
+   ```python
+   def sum_of_array(arr):
+       return sum(arr)
+
+   array = [1, 2, 3, 4, 5]
+   print("Sum of array:", sum_of_array(array))
+   ```
+
+2. **Find the largest element in an array:**
+   ```python
+   def largest_element(arr):
+       return max(arr)
+
+   array = [1, 2, 3, 4, 5]
+   print("Largest element in array:", largest_element(array))
+   ```
+
+3. **Array rotation:**
+   ```python
+   def rotate_array(arr, k):
+       k %= len(arr)  # In case k is larger than the array length
+       return arr[-k:] + arr[:-k]
+
+   array = [1, 2, 3, 4, 5]
+   k = 2  # Number of rotations
+   print("Rotated array:", rotate_array(array, k))
+   ```
+
+4. **Split the array and add the first part to the end:**
+   ```python
+   def split_and_add(arr, k):
+       k %= len(arr)  # In case k is larger than the array length
+       return arr[k:] + arr[:k]
+
+   array = [1, 2, 3, 4, 5]
+   k = 2
+   print("Array after split and add:", split_and_add(array, k))
+   ```
+
+5. **Check if the given array is Monotonic:**
+   ```python
+   def is_monotonic(arr):
+       return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1)) or \
+              all(arr[i] >= arr[i + 1] for i in range(len(arr) - 1))
+
+   array = [1, 2, 2, 3, 4]
+   print("Array is monotonic:", is_monotonic(array))
+   ```
+
+Feel free to test these functions with different arrays!
