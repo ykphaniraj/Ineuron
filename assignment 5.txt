@@ -1,0 +1,25 @@
+assignment 5
+
+1. **Empty Dictionary Code:**  
+   `{}`
+
+2. **Value of Dictionary with Key 'foo' and Value 42:**  
+   `{'foo': 42}`
+
+3. **Distinction Between Dictionary and List:**  
+   A dictionary stores key-value pairs, while a list stores items in an ordered sequence.
+
+4. **Accessing `spam['foo']` if `spam` is `{'bar': 100}`:**  
+   You get a KeyError because the key `'foo'` does not exist.
+
+5. **Difference Between `'cat' in spam` and `'cat' in spam.keys()`:**  
+   Both check if `'cat'` is a key in `spam`; they are functionally the same.
+
+6. **Difference Between `'cat' in spam` and `'cat' in spam.values()`:**  
+   `'cat' in spam` checks if `'cat'` is a key, while `'cat' in spam.values()` checks if `'cat'` is a value.
+
+7. **Shortcut for Adding a Key if it Doesn’t Exist:**  
+   `spam.setdefault('color', 'black')`
+
+8. **Pretty Printing a Dictionary:**  
+   Use the `pprint` module and `pprint.pprint()` function.

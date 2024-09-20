@@ -1,0 +1,31 @@
+assignment 3
+
+1. Advantages of Functions:  
+   Functions allow code reuse, modularity, and easier debugging.
+
+2. Function Code Execution:  
+   Code in a function runs only when the function is called, not when it's defined.
+
+3. Function Creation Statement:  
+   The `def` statement creates a function in Python.
+
+4. Function vs. Function Call:  
+   A function is the block of code, and a function call is the execution of that code.
+
+5. Global and Local Scopes:  
+   There is one global scope, and each function call creates a new local scope.
+
+6. Local Variables After Function Returns:  
+   Local variables are destroyed when the function call ends.
+
+7. Return Value Concept:  
+   A return value is the result of a function, and it can be used in expressions.
+
+8. No Return Statement:  
+   If a function has no return statement, it returns `None`.
+
+9. Referencing Global Variable:  
+   Use the `global` keyword to refer to a global variable within a function.
+
+10. Data Type of `None`:  
+   The data type of `None` is `NoneType`.

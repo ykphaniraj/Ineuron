@@ -1,0 +1,25 @@
+ASSignment 4
+
+1. **What is `[]`:**  
+   `[]` is an empty list.
+
+2. **Assign 'hello' as Third Value in `spam`:**  
+   `spam[2] = 'hello'` assigns `'hello'` as the third value in the list.
+
+3. **Value of `spam[int(int('3' * 2) / 11)]`:**  
+   `'d'`, because `int('3' * 2)` gives `33`, and `33 / 11` gives `3`, which accesses `spam[3]` or `'d'`.
+
+4. **Value of `spam[-1]`:**  
+   `'d'`, as `spam[-1]` refers to the last item in the list.
+
+5. **Value of `spam[:2]`:**  
+   `['a', 'b']`, the first two items of the list.
+
+6. **Value of `bacon.index('cat')`:**  
+   `1`, the index of the first occurrence of `'cat'`.
+
+7. **Effect of `bacon.append(99)`:**  
+   Appends `99` to the end of the list, making it `[3.14, 'cat', 11, 'cat', True, 99]`.
+
+8. **Effect of `bacon.remove('cat')`:**  
+   Removes the first `'cat'`, changing the list to `[3.14, 11, 'cat', True]`.

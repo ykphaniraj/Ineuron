@@ -1,0 +1,37 @@
+assignment 6
+
+1. Escape Characters:  
+   Special characters used with a backslash (`\`) to represent characters that are difficult to include in a string (e.g., `\n` for newline).
+
+2. Escape Characters `\n` and `\t`:  
+   `\n` stands for newline, and `\t` stands for a tab.
+
+3. Including Backslash in a String:  
+   Use a double backslash (`\\`) to include a backslash in a string.
+
+4. Single Quote in `"Howl's Moving Castle"`:  
+   The single quote isn’t escaped because the string is enclosed in double quotes.
+
+5. String of Newlines Without `\n`:  
+   Use triple quotes (`"""`) to write multiline strings.
+
+6. Values of Expressions:  
+   `'Hello world!'[1]` = `'e'`  
+   `'Hello world!'[0:5]` = `'Hello'`  
+   `'Hello world!'[:5]` = `'Hello'`  
+   `'Hello world!'[3:]` = `'lo world!'`
+
+7. Values of Upper and Lower Expressions:  
+   `'Hello'.upper()` = `'HELLO'`  
+   `'Hello'.upper().isupper()` = `True`  
+   `'Hello'.upper().lower()` = `'hello'`
+
+8. Values of Split and Join Expressions:  
+   `'Remember remember the fifth of July.'.split()` = `['Remember', 'remember', 'the', 'fifth', 'of', 'July.']`  
+   `'-'.join('There can only one.'.split())` = `'There-can-only-one.'`
+
+9. String Justification Methods:  
+   `str.rjust()`, `str.ljust()`, and `str.center()`.
+
+10. Removing Whitespace:  
+    Use `str.strip()` to remove whitespace from the start and end of a string.
