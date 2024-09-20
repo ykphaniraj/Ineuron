@@ -1,0 +1,57 @@
+Assignment 11
+
+1. Assertion for Negative Integer:
+   ```python
+   assert spam >= 0, "Spam cannot be a negative integer."
+   ```
+
+2. Assertion for Identical Strings:
+   ```python
+   assert eggs.lower() != bacon.lower(), "Eggs and bacon cannot be the same."
+   ```
+
+3. Assertion that Always Fails:
+   ```python
+   assert False, "This assertion always fails."
+   ```
+
+4. Lines for `logging.debug()`:
+   ```python
+   import logging
+   logging.basicConfig(level=logging.DEBUG)
+   ```
+
+5. Lines to Log to a File:
+   ```python
+   import logging
+   logging.basicConfig(filename='programLog.txt', level=logging.DEBUG)
+   ```
+
+6. Five Levels of Logging:
+   - DEBUG
+   - INFO
+   - WARNING
+   - ERROR
+   - CRITICAL
+
+7. Disable All Logging Messages:
+   ```python
+   logging.disable(logging.CRITICAL)
+   ```
+
+8. Advantages of Logging over Print:
+   - Logging can be configured to output to different destinations (console, file).
+   - It supports various severity levels for better categorization.
+   - It can be turned on/off or set to different levels without changing code.
+   - It provides timestamps and can include additional context.
+
+9. Debugger Buttons:
+   - Step Over: Executes the current line and moves to the next line in the same function.
+   - Step In: Moves into the function call on the current line to debug inside it.
+   - Step Out: Completes the current function and returns to the caller function.
+
+10. Debugger Stops After Continue:
+    The debugger stops at the next breakpoint or when the program exits.
+
+11. Concept of a Breakpoint:
+    A breakpoint is a designated stopping point in the code where execution pauses, allowing the programmer to inspect variables and program flow for debugging purposes.
