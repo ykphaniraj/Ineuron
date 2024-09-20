@@ -1,0 +1,35 @@
+assignment 1
+
+1. Values or Expressions:  
+   `'hello'` – value (string)  
+   `-87.8` – value (float)  
+   `-` and `/` – expressions (operators)  
+   `6` – value (integer)
+
+2. Difference between String and Variable:  
+   A string is a sequence of characters, while a variable is a name that stores data, which can include strings.
+
+3. Three Data Types:  
+   Integer (e.g., `5`), String (e.g., `'hello'`), and Boolean (`True` or `False`).
+
+4. Expression:  
+   An expression is made up of values and operators, and it evaluates to a value.
+
+5. Expression vs. Statement:  
+   An expression evaluates to a value, while a statement performs an action (e.g., assignment).
+
+6. Value of `bacon`:  
+   After running `bacon = 22` and `bacon + 1`, `bacon` still contains `22` because the result isn't assigned back to `bacon`.
+
+7. Values of Expressions:  
+   `'spam' + 'spamspam'` evaluates to `'spamspamspam'`  
+   `'spam' * 3` evaluates to `'spamspamspam'`
+
+8. Valid and Invalid Variable Names:  
+   `eggs` is valid because it follows the variable naming rules. `100` is invalid because variable names cannot start with numbers.
+
+9. Three Conversion Functions:  
+   `int()` for integer, `float()` for floating-point, and `str()` for string.
+
+10. Error and Fix in Expression:  
+    `'I have eaten ' + 99 + ' burritos.'` causes a type error. Fix it by converting `99` to a string: `'I have eaten ' + str(99) + ' burritos.'`.

@@ -1,0 +1,84 @@
+ASSIGNMENT2 docx
+1. Two Values of the Boolean Data Type:  
+   The two Boolean values are `True` and `False`. They are written exactly as `True` and `False` (capitalized) in Python.
+
+2. Three Types of Boolean Operators:  
+   - AND: Returns `True` if both operands are true.  
+   - OR: Returns `True` if at least one operand is true.  
+   - NOT: Returns `True` if the operand is false.
+
+3. Truth Tables:
+   - AND: 
+     - `True AND True` = `True`
+     - `True AND False` = `False`
+     - `False AND True` = `False`
+     - `False AND False` = `False`
+   - OR:
+     - `True OR True` = `True`
+     - `True OR False` = `True`
+     - `False OR True` = `True`
+     - `False OR False` = `False`
+   - NOT:
+     - `NOT True` = `False`
+     - `NOT False` = `True`
+
+4. Expression Values:
+   - `(5 > 4) and (3 == 5)` evaluates to `False`.
+   - `not (5 > 4)` evaluates to `False`.
+   - `(5 > 4) or (3 == 5)` evaluates to `True`.
+   - `not ((5 > 4) or (3 == 5))` evaluates to `False`.
+   - `(True and True) and (True == False)` evaluates to `False`.
+   - `(not False) or (not True)` evaluates to `True`.
+
+5. Six Comparison Operators:  
+   - `==` (equal to), `!=` (not equal to), `<` (less than), `>` (greater than), `<=` (less than or equal to), `>=` (greater than or equal to).
+
+6. Equal to vs. Assignment Operator:  
+   - `==` checks for equality between two values, while `=` assigns a value to a variable.
+   - Example: `x = 10` assigns 10 to `x`, and `x == 10` checks if `x` is equal to 10.
+
+7. Blocks in the Code:
+   - First block: `if spam == 10: print('eggs')`
+   - Second block: `if spam > 5: print('bacon')`
+   - Third block: `else: print('ham') print('spam') print('spam')`
+
+8. Code for Spam:
+   ```python
+   spam = int(input("Enter a value: "))
+   if spam == 1:
+       print("Hello")
+   elif spam == 2:
+       print("Howdy")
+   else:
+       print("Greetings!")
+   ```
+
+9. Endless Loop Keys:  
+   Press `Ctrl + C` to interrupt and stop an endless loop.
+
+10. Difference Between `break` and `continue`:  
+    - `break` exits the loop completely.
+    - `continue` skips the current iteration and moves to the next one.
+
+11. Difference Between `range(10)`, `range(0, 10)`, and `range(0, 10, 1)`:  
+    - They all generate the same sequence (0 to 9), but `range(0, 10, 1)` explicitly states the start, stop, and step size.
+
+12. For Loop and While Loop:
+   - For Loop:
+     ```python
+     for i in range(1, 11):
+         print(i)
+     ```
+   - While Loop:
+     ```python
+     i = 1
+     while i <= 10:
+         print(i)
+         i += 1
+     ```
+
+13. Calling `bacon()` from `spam`:  
+   ```python
+   import spam
+   spam.bacon()
+   ```
