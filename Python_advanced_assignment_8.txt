@@ -1,0 +1,20 @@
+ Q1
+The two latest user-defined exception constraints in Python 3.x are:
+1. **Inheriting from `Exception`**: Custom exceptions should inherit from the built-in `Exception` class, ensuring they are part of the exception hierarchy.
+2. **Using `__init__()`**: Custom exceptions can define an `__init__()` method to accept additional arguments, allowing for more informative error messages and context.
+
+ Q2
+Class-based exceptions that have been raised are matched to handlers by checking the exception type against the exception types specified in the `except` clauses. If the raised exception is an instance of the specified class or a subclass of it, the corresponding handler is executed.
+
+ Q3
+Two methods for attaching context information to exception artifacts include:
+1. **Custom Attributes**: You can define custom attributes in your user-defined exception classes to hold additional context information.
+2. **Using the `__context__` Attribute**: The built-in exception class automatically attaches context to the current exception, allowing you to access the original exception that caused the new one.
+
+ Q4
+Two methods for specifying the text of an exception object's error message are:
+1. **Passing a String to the Exception Constructor**: When raising an exception, you can pass a string message as an argument to the exception's constructor.
+2. **Overriding the `__str__()` Method**: You can define a `__str__()` method in your custom exception class to return a specific error message when the exception is converted to a string.
+
+ Q5
+String-based exceptions are no longer used because they lack the structure and flexibility provided by class-based exceptions. Using class-based exceptions allows for better organization, the ability to define multiple attributes and methods, and improved handling of different exception types through inheritance, making error handling more robust and maintainable.

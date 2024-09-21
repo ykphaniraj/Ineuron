@@ -1,0 +1,46 @@
+ Q1
+Yes, you can create a program that employs both positive and negative indexing. For example:
+
+```python
+def index_demo(lst):
+    print("First element:", lst[0])       # Positive indexing
+    print("Last element:", lst[-1])       # Negative indexing
+
+my_list = [10, 20, 30, 40, 50]
+index_demo(my_list)
+```
+
+There are no repercussions when using both indexing types; they can coexist without issues, as they are simply different ways to access the same elements.
+
+ Q2
+The most effective way to start with 1,000 elements in a Python list, all set to the same value, is to use the multiplication operator:
+
+```python
+my_list = [value] * 1000
+```
+This creates a list containing 1,000 references to the same object.
+
+ Q3
+To slice a list to get every other element, such as the first, third, fifth, and so on, you can use slicing with a step:
+
+```python
+new_list = original_list[::2]
+```
+This creates a new list containing every second element, starting from the first.
+
+ Q4
+The distinctions between indexing and slicing are:
+- **Indexing** retrieves a single element from a list (e.g., `lst[0]`), while **slicing** creates a new list containing a range of elements (e.g., `lst[0:5]`).
+- Indexing uses a single integer, whereas slicing uses a start and stop index (and optionally a step).
+
+ Q5
+If one of the slicing expression's indexes is out of range, Python will not raise an error. Instead, it will simply return a list up to the available index. For example, `lst[10:20]` on a list of length 10 will return an empty list.
+
+ Q6
+If you want the function to change the values of a list so that the list is different after the function returns, you should avoid reassigning the list to a new object (e.g., `lst = [new_values]`). Instead, modify the list in place (e.g., `lst.append(value)` or `lst[index] = new_value`).
+
+ Q7
+The concept of an unbalanced matrix refers to a matrix where the rows do not have the same number of columns, often resulting in a jagged or irregular structure. In Python, this can be represented as a list of lists, where each inner list may vary in length.
+
+ Q8
+It is necessary to use either list comprehension or a loop to create arbitrarily large matrices because Python lists are dynamic, and the size of a matrix can vary significantly. These methods allow you to systematically initialize or populate each element according to specific rules, making it possible to create complex structures efficiently.

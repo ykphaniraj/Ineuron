@@ -1,0 +1,26 @@
+ Q1
+Classes are blueprints for creating objects that define their properties and behaviors, while modules are files that contain Python code, including classes, functions, and variables, which can be imported and reused across programs.
+
+ Q2
+Instances are created by calling the class with parentheses, which invokes the `__init__` method, while classes are defined using the `class` keyword followed by the class name and a colon.
+
+ Q3
+Class attributes should be created within the class definition but outside of any methods, typically right after the class declaration, to ensure they are shared among all instances of the class.
+
+ Q4
+Instance attributes are created inside the `__init__` method (or other instance methods) using the `self` keyword to associate them with the specific instance being created.
+
+ Q5
+The term "self" in a Python class refers to the instance of the class itself, allowing methods to access and modify instance attributes and call other methods on that specific instance.
+
+ Q6
+A Python class handles operator overloading by defining special methods (also known as magic methods) such as `__add__`, `__sub__`, and `__str__` to specify how operators behave with instances of the class.
+
+ Q7
+Operator overloading should be considered when it makes the class more intuitive and easier to use, allowing instances to be manipulated using standard operators in a way that is natural and readable.
+
+ Q8
+The most popular form of operator overloading is the addition operator (`+`), typically implemented using the `__add__` method to define how two instances of a class should be added together.
+
+ Q9
+The two most important concepts to grasp in order to comprehend Python OOP code are encapsulation (the bundling of data and methods) and inheritance (the ability to create new classes based on existing ones).

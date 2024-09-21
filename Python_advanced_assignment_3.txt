@@ -1,0 +1,14 @@
+ 1. Concept of an Abstract Superclass
+An abstract superclass is a class that cannot be instantiated on its own and is meant to be subclassed. It may contain abstract methods, which are defined but not implemented, forcing subclasses to provide concrete implementations of these methods.
+
+ 2. Effect of a Basic Assignment Statement in a Class Statement
+When a class statement contains a basic assignment statement, it creates a class attribute. This attribute is shared across all instances of the class and can be accessed using the class name or any instance of the class.
+
+ 3. Manual Call to a Superclass's `__init__` Method
+A class needs to manually call a superclass’s `__init__` method to ensure that the initialization logic defined in the superclass is executed, which is crucial for setting up inherited attributes and maintaining the proper behavior of the class hierarchy.
+
+ 4. Augmenting an Inherited Method
+To augment an inherited method instead of completely replacing it, you can override the method in the subclass and call the superclass method within it using `super()` (e.g., `super().method_name()`) to retain the original functionality while adding additional behavior.
+
+ 5. Local Scope of a Class vs. Function
+The local scope of a class encompasses the attributes and methods defined within the class, accessible by instances of the class, while the local scope of a function is limited to its parameters and variables defined within that function, not accessible outside it.

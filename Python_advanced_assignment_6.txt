@@ -1,0 +1,25 @@
+
+ Q1
+Three applications for exception processing include:
+1. **Error Handling**: To manage runtime errors gracefully, allowing the program to continue or terminate without crashing.
+2. **Resource Management**: To ensure that resources like files or network connections are properly closed even if an error occurs.
+3. **Input Validation**: To catch invalid user inputs and provide informative feedback, guiding users toward correct input formats.
+
+ Q2
+If you don't handle an exception, it will propagate up the call stack until it either finds a suitable handler or terminates the program, resulting in an unhandled exception error message and potentially losing unsaved data or state.
+
+ Q3
+Options for recovering from an exception include:
+- **Try-Except Blocks**: Using try-except statements to catch exceptions and execute alternative code.
+- **Re-raising Exceptions**: After handling an exception, you can re-raise it to propagate it further up if necessary.
+- **Using Finally Blocks**: To execute cleanup code regardless of whether an exception occurred.
+
+ Q4
+Two methods for triggering exceptions in your script are:
+1. **Using the `raise` Statement**: You can explicitly raise an exception with `raise ExceptionType("Error message")`.
+2. **Raising Built-in Exceptions**: Certain actions, such as accessing an out-of-range index in a list, can automatically trigger built-in exceptions like `IndexError`.
+
+ Q5
+Two methods for specifying actions to be executed at termination time, regardless of whether an exception exists, are:
+1. **Using a `finally` Block**: Code in the `finally` block runs after try-except, ensuring cleanup happens regardless of exceptions.
+2. **Using Context Managers**: Leveraging the `with` statement allows for automatic resource management, ensuring that necessary cleanup is performed when exiting the context.

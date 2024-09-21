@@ -1,0 +1,42 @@
+ Q1
+**Explain the difference between greedy and non-greedy syntax with visual terms in as few words as possible. What is the bare minimum effort required to transform a greedy pattern into a non-greedy one? What characters or characters can you introduce or change?**
+- **Greedy syntax** consumes as much input as possible (e.g., `.*` matches everything).  
+- **Non-greedy syntax** consumes the least (e.g., `.*?` matches as little as possible).  
+To transform a greedy pattern into a non-greedy one, append a question mark (`?`) after the quantifier (e.g., `*` becomes `*?`).
+
+ Q2
+**When exactly does greedy versus non-greedy make a difference? What if you're looking for a non-greedy match but the only one available is greedy?**
+Greedy vs. non-greedy makes a difference when multiple matches are possible in the input, and the greedy pattern consumes more than intended. If only a greedy match is available, it will capture the longest possible substring, which may not meet the intended match criteria.
+
+ Q3
+**In a simple match of a string, which looks only for one match and does not do any replacement, is the use of a nontagged group likely to make any practical difference?**
+In a simple match that looks for one instance, a nontagged group may not make a practical difference since it doesn't capture or retrieve any specific match data. 
+
+ Q4
+**Describe a scenario in which using a nontagged category would have a significant impact on the program's outcomes.**
+Using a nontagged group might impact performance when the regex engine uses backtracking, especially in complex patterns. For example, in a pattern that might lead to ambiguities, using a nontagged group can reduce overhead and improve matching speed without unnecessary captures.
+
+ Q5
+**Unlike a normal regex pattern, a look-ahead condition does not consume the characters it examines. Describe a situation in which this could make a difference in the results of your program.**
+If you want to match a string that must be followed by a specific substring without including it in the match (e.g., matching "abc" only if it is followed by "def"), a look-ahead allows you to assert this condition without consuming "def" in the match result.
+
+ Q6
+**In standard expressions, what is the difference between positive look-ahead and negative look-ahead?**
+- **Positive look-ahead** (`(?=...)`) asserts that a pattern must be followed by another pattern (e.g., `\d(?= dollars)` matches a digit only if followed by " dollars").
+- **Negative look-ahead** (`(?!...)`) asserts that a pattern must not be followed by another pattern (e.g., `\d(?! dollars)` matches a digit only if it is not followed by " dollars").
+
+ Q7
+**What is the benefit of referring to groups by name rather than by number in a standard expression?**
+Referring to groups by name (e.g., `(?P<name>...)`) improves code readability and maintainability, especially in complex patterns. It avoids confusion associated with positional indices, making it easier to understand which part of the pattern corresponds to which captured group.
+
+ Q8
+**Can you identify repeated items within a target string using named groups, as in "The cow jumped over the moon"?**
+Yes, you can identify repeated items using named groups. For example, you can define a regex like `(?P<animal>cow)|(?P<action>jumped)` to capture "cow" and "jumped" separately. However, to identify repeated items specifically, you'd structure the regex accordingly.
+
+ Q9
+**When parsing a string, what is at least one thing that the Scanner interface does for you that the re.findall feature does not?**
+The Scanner interface can manage state, allowing it to maintain context across multiple calls and efficiently process input, while `re.findall` processes the entire string at once, returning all matches in a list without maintaining state.
+
+ Q10
+**Does a scanner object have to be named scanner?**
+No, a scanner object does not have to be named "scanner." You can name it anything appropriate to your code's context, as long as it follows Python’s naming conventions.

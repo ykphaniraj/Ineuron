@@ -1,0 +1,37 @@
+ Q1
+Yes, assigning a value to a string's indexed character does violate Python's string immutability. Strings in Python are immutable, meaning their content cannot be changed after creation. Attempting to assign a value to an indexed character will result in a `TypeError`.
+
+ Q2
+Using the `+=` operator to concatenate strings does not violate Python's string immutability because it creates a new string rather than modifying the original. The original string remains unchanged; instead, a new string is created and reassigned to the variable.
+
+ Q3
+In Python, you can index a character in a string in different ways:
+1. **Positive Indexing**: Using positive integers (e.g., `string[0]`).
+2. **Negative Indexing**: Using negative integers to count from the end (e.g., `string[-1]`).
+
+ Q4
+The relationship between indexing and slicing is that indexing retrieves a single character from a string, while slicing extracts a substring (a sequence of characters) based on a specified range of indices. Slicing can be seen as a more flexible form of indexing.
+
+ Q5
+An indexed character's exact data type is `str`, as it is a single character string. A slicing-generated substring is also of the `str` type, representing a portion of the original string.
+
+ Q6
+In Python, strings are essentially sequences of characters. Each character in a string is also a string of length one, which means that both string and character "types" are ultimately of the same type, `str`.
+
+ Q7
+Two operators that allow you to combine strings are:
+1. **`+` operator**: Concatenates two or more strings.
+2. **`+=` operator**: Appends a string to an existing string.
+
+One method that allows you to combine strings is:
+- **`str.join()` method**: Combines a list of strings into a single string using a specified separator.
+
+ Q8
+The benefit of first checking the target string with `in` or `not in` before using the `index` method is to avoid raising a `ValueError`. If the substring does not exist, using `in` or `not in` provides a way to handle the absence of the substring gracefully.
+
+ Q9
+Operators and built-in string methods that produce simple Boolean (true/false) results include:
+1. **`in` operator**: Checks if a substring exists within a string.
+2. **`not in` operator**: Checks if a substring does not exist within a string.
+3. **`str.startswith()` method**: Checks if a string starts with a specified substring.
+4. **`str.endswith()` method**: Checks if a string ends with a specified substring.

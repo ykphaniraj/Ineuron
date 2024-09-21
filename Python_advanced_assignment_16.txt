@@ -1,0 +1,40 @@
+ Q1
+**What is the benefit of regular expressions?**
+Regular expressions provide a powerful way to search, match, and manipulate strings based on specific patterns. They enable complex string operations, such as validation, extraction, and substitution, with concise syntax, making text processing more efficient and flexible.
+
+ Q2
+**Describe the difference between the effects of "(ab)c+" and "a(bc)+." Which of these, if any, is the unqualified pattern "abc+"?**
+- **"(ab)c+"** matches a sequence where "ab" is followed by one or more "c" characters (e.g., "abcc", "abccc").
+- **"a(bc)+"** matches a sequence starting with "a" followed by one or more occurrences of "bc" (e.g., "abc", "abcbc").
+The unqualified pattern **"abc+"** is represented by **"(ab)c+"** since it captures the "ab" followed by one or more "c".
+
+ Q3
+**How much do you need to use the following sentence while using regular expressions? `import re`**
+You must use `import re` at the beginning of your Python script or module when working with regular expressions, as it imports the `re` module, which provides the necessary functions and classes for regex operations.
+
+ Q4
+**Which characters have special significance in square brackets when expressing a range, and under what circumstances?**
+Inside square brackets, the characters `-`, `^`, and `]` have special significance:
+- **`-`**: Indicates a range (e.g., `[a-z]` for lowercase letters).
+- **`^`**: When placed at the start, it negates the set (e.g., `[^a-z]` matches anything that is not a lowercase letter).
+- **`]`**: Must be escaped if you want to include it in the set (e.g., `[a-zA-Z]` includes both lowercase and uppercase letters).
+
+ Q5
+**How does compiling a regular-expression object benefit you?**
+Compiling a regular expression into a pattern object using `re.compile()` improves performance, especially when the same pattern is used multiple times. It also allows for more complex operations, such as matching options, and provides methods for further manipulation.
+
+ Q6
+**What are some examples of how to use the match object returned by re.match and re.search?**
+The match object contains information about the match:
+- **Accessing matched text**: Use `match.group()` to get the matched substring.
+- **Finding position**: Use `match.start()` and `match.end()` to find the start and end indices of the match.
+- **Capturing groups**: If parentheses are used in the pattern, you can access captured groups with `match.group(n)` where `n` is the group number.
+
+ Q7
+**What is the difference between using a vertical bar (|) as an alteration and using square brackets as a character set?**
+- The **vertical bar (|)** acts as a logical OR operator to match either pattern on its left or right (e.g., `cat|dog` matches either "cat" or "dog").
+- **Square brackets** define a character set to match any one of the characters listed (e.g., `[abc]` matches either "a", "b", or "c").
+
+ Q8
+**In regular-expression search patterns, why is it necessary to use the raw-string indicator (r)? In replacement strings?**
+Using the raw-string indicator (e.g., `r"pattern"`) prevents Python from interpreting backslashes as escape characters. This is particularly important in regex, where backslashes are commonly used. In replacement strings, it's less critical but can help avoid confusion and ensure that backslashes are treated literally.

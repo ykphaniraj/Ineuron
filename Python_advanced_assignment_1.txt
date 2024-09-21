@@ -1,0 +1,23 @@
+Q1
+The purpose of Python's OOP (Object-Oriented Programming) is to organize code into reusable and modular structures, enabling better abstraction, encapsulation, inheritance, and polymorphism.
+
+ Q2
+An inheritance search looks for an attribute first in the instance object, then in its class, and continues up the method resolution order (MRO) through its superclasses.
+
+ Q3
+A class object is a blueprint that defines the structure and behavior of instances, while an instance object is a specific realization of that class, holding its own state.
+
+ Q4
+The first argument in a class’s method, typically named `self`, refers to the instance of the class itself, allowing access to its attributes and methods.
+
+ Q5
+The `__init__` method is a special constructor method that initializes an instance's attributes when the instance is created, setting up its initial state.
+
+ Q6
+To create a class instance, you call the class using its name followed by parentheses, which invokes the `__init__` method to initialize the instance.
+
+ Q7
+Creating a class involves defining it using the `class` keyword, followed by the class name and a colon, and then implementing its methods and attributes within an indented block.
+
+ Q8
+Superclasses of a class can be defined by specifying them in parentheses following the class name in the class definition, enabling inheritance of attributes and methods.

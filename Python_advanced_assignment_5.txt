@@ -1,0 +1,14 @@
+ Q1
+Multiple inheritance is a feature in object-oriented programming where a class can inherit attributes and methods from more than one superclass, allowing for a combination of functionalities and behaviors from multiple sources.
+
+ Q2
+Delegation is a design pattern in which an object relies on another helper object to perform a task, allowing for more flexible code organization and reusability by delegating specific responsibilities to specialized objects.
+
+ Q3
+Composition is a design principle where a class is constructed using one or more objects from other classes, establishing a "has-a" relationship. This allows for building complex types by combining simpler objects, promoting code reuse and modular design.
+
+ Q4
+Bound methods are methods that are associated with a specific instance of a class, allowing access to the instance's attributes and other methods. They are created when a method is accessed through an instance, enabling the method to operate on that instance's data.
+
+ Q5
+The purpose of pseudoprivate attributes (denoted with a single underscore prefix, e.g., `_attribute`) is to indicate that the attribute is intended for internal use within the class or module, signaling to developers that it should not be accessed directly from outside, while still being technically accessible.

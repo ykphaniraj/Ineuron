@@ -1,0 +1,23 @@
+ 1. What are the new features added in Python 3.8 version?
+Python 3.8 introduced several new features, including:
+- **Assignment Expressions**: The `:=` operator allows assignments within expressions.
+- **Positional-only Parameters**: The syntax `def func(a, b, /)` specifies that parameters before the slash must be positional.
+- **f-strings Support for `=`**: Enhanced f-strings to include expressions (e.g., `f"{x=}"`).
+- **TypedDict**: A new way to specify dictionaries with a fixed set of keys.
+- **Shared Memory for Multiprocessing**: Improved performance in multiprocessing by allowing memory sharing.
+
+ 2. What is monkey patching in Python?
+Monkey patching is a technique to modify or extend the behavior of libraries or classes at runtime. This involves adding, modifying, or overriding methods or attributes, allowing you to change how existing code works without altering the original source code.
+
+ 3. What is the difference between a shallow copy and deep copy?
+- **Shallow Copy**: Creates a new object but inserts references to the original objects. Changes to mutable objects in the copied object will affect the original.
+- **Deep Copy**: Creates a new object and recursively copies all objects found in the original, ensuring that no references to the original objects remain. Changes to the copied object do not affect the original.
+
+ 4. What is the maximum possible length of an identifier?
+In Python, the maximum possible length of an identifier (variable name, function name, etc.) is not explicitly defined in the language specification. However, it is generally recommended to keep identifiers under 79 characters for readability, and some implementations may have practical limits (e.g., CPython has a maximum length of 255 characters).
+
+ 5. What is generator comprehension?
+Generator comprehension is a concise way to create generators in Python using a syntax similar to list comprehensions but with parentheses instead of brackets. It produces values one at a time and is more memory efficient. For example:
+```python
+gen = (x * 2 for x in range(10))  # This creates a generator that yields even numbers.
+```

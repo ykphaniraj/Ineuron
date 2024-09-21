@@ -1,0 +1,13 @@
+ Q2
+The two most popular try statement variations are:
+1. **Try-Except Block**: Used to catch and handle exceptions that occur within the try block.
+2. **Try-Except-Finally Block**: Combines a try-except block with a finally block, ensuring that cleanup code runs regardless of whether an exception was raised.
+
+ Q3
+The purpose of the `raise` statement is to trigger an exception, either by raising a specific exception type or by re-raising the current exception, allowing the program to handle errors explicitly and control the flow of error handling.
+
+ Q4
+The `assert` statement checks a condition and raises an `AssertionError` if the condition is false. It is similar to the `if` statement in that it evaluates a condition, but it is used primarily for debugging purposes to ensure certain conditions hold true during execution.
+
+ Q5
+The purpose of the `with/as` statement is to simplify resource management by ensuring that resources are properly acquired and released, such as file handling. It is similar to using a try-finally block, where cleanup code is guaranteed to run, but with a more concise and readable syntax.
